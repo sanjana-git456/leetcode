@@ -16,4 +16,12 @@ def swap(node):
     swap(node.left)
     swap(node.right)
     return node
+def inorder(node):
+    if node is None:
+        return
+    inorder(node.left)
+    print(node.val, end=" ")
+    inorder(node.right)
+
 swap(root)
+inorder(root)
